@@ -1,0 +1,97 @@
+@use "src/sass/abstracts" as *;
+
+.nav {
+  background: #fff;
+  box-shadow: 0 2px 50px rgba(0, 0, 0, 0.15);
+
+  &_wrap {
+    @include flex(center, space-between);
+    height: 60px;
+  }
+
+  &_logo {
+    width: 35px;
+    height: 35px;
+    background: $pink_900;
+    border-radius: 50%;
+  }
+
+  &_auth {
+    display: flex;
+    gap: 20px;
+  }
+
+  &_user {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    &_ava {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      position: relative;
+      > svg {
+        transition: all 0.2s ease-in-out;
+      }
+
+      &.active {
+        svg {
+          transform: rotate(180deg);
+        }
+      }
+
+      &:hover {
+        img {
+          border: 2px solid $pink_900;
+        }
+      }
+
+      img {
+        width: 35px;
+        height: 35px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid transparent;
+      }
+    }
+
+    &_list {
+      position: absolute;
+      z-index: 999;
+      background: #fff;
+      top: 115%;
+      width: 150px;
+      right: 0;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      border: 1px solid #e8e8e8;
+      border-radius: 5px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease-in-out;
+
+      &.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      &_item {
+        display: flex;
+      }
+
+      &_link {
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+
+        &:hover {
+          background: #e8e8e8;
+        }
+      }
+    }
+  }
+}

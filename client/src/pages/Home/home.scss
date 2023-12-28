@@ -1,0 +1,10 @@
+.home {
+   margin-top: 20px;
+   &_block {
+     margin-top: 26px;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-start;
+     gap: 20px;
+   }
+ }

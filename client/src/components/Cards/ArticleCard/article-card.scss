@@ -1,0 +1,44 @@
+@use "src/sass/abstracts" as *;
+
+.article-card {
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 30px;
+  gap: 10px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  word-break: break-all;
+  cursor: pointer;
+
+  >span {
+    font-weight: 700;
+    color: #a5a5a5;
+  }
+
+  p {
+    font-weight: 700;
+    color: #000;
+  }
+
+  >svg {
+    position: absolute;
+    top: 13px;
+    right: 13px;
+    transition: all 0.2s ease-in-out;
+    opacity: 0;
+  }
+
+  &:hover {
+    border: 1px solid $pink_900;
+    transform: scale(1.07);
+    box-shadow: 13px 13px 28px -1px rgba(210, 54, 105, 0.18);
+
+    svg {
+      opacity: 1;
+    }
+  }
+}

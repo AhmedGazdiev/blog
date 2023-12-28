@@ -1,0 +1,12 @@
+@use "src/sass/abstracts" as *;
+
+.heading {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
+
+  &.pink {
+    color: $pink_900;
+  }
+}
